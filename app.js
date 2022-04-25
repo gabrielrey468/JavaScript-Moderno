@@ -1,18 +1,17 @@
-const lista = document.getElementById('lista')
+const lista = document.querySelector('#lista')
 
-const arrayItem = ["item 1", "item 2", "item 3"];
+const arrayLista = ["item 1", "item 2", "item 3"];
 
+const template = document.querySelector('#template-li').content
 const  fragment = document.createDocumentFragment()
-//const fragment = new DocumentFragment()
 
-arrayItem.forEach(item => {
-    const li = document.createElement('li')
-    li.textContent = item
+arrayLista.forEach(item => {
+    //template.querySelector('.list span').texContent = item
+    template.querySelector('.text-danger').texContent = item
+    //template.querySelector('span').texContent = item
 
-    const childNode = fragment.firstChild
-    console.log(item, childNode)
-
-    fragment.insertBefore(li, childNode)
+    const clone = template.cloneNode(true)
+    fragment.appendChild(clone)
 })
 
 lista.appendChild(fragment)
