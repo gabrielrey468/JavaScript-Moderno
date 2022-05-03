@@ -1,0 +1,22 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.container{
+    background-color: aqua;
+}
+
+.btn-info{
+    padding-bottom: 0px;
+    border-radius: 10px;
+    font-weight: bolder;
+    background-color: blue;
+}
+
+.btn-danger{
+    padding-bottom: 0px;
+    border-radius: 10px;
+    font-weight: bolder;
+    background-color: red;
+}
